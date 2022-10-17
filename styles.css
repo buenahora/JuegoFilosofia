@@ -27,3 +27,12 @@ body {
   align-items: center;
   margin-bottom: 5%;
 }
+#containergrandepreguntas .form-check {
+  width: 100%;
+}
+#containergrandepreguntas .form-check label {
+  width: 100%;
+}
+#containergrandepreguntas .form-check label:hover {
+  font-weight: 500;
+}

@@ -32,4 +32,13 @@ $font: 'Poppins', sans-serif;
     flex-direction: column;
     align-items: center;
     margin-bottom: 5%;
+    .form-check{
+        width: 100%;
+    }
+    .form-check label{
+        width: 100%;
+    }
+    .form-check label:hover{
+        font-weight: 500;
+    }
   }
