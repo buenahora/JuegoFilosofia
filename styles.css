@@ -9,3 +9,21 @@ body {
   background-color: white;
   font-family: "Poppins", sans-serif;
 }
+
+.card .list-group li {
+  background-color: rgb(230, 230, 255);
+}
+.card .list-group button {
+  text-align: left;
+}
+.card .list-group button:active {
+  background-color: grey;
+}
+
+#containergrandepreguntas {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5%;
+}
