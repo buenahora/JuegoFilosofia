@@ -1,4 +1,4 @@
-var totalPuntaje = 100;
+var totalPuntaje = 0;
 var widthProgressBar = 0;
 var barraProgreso = document.querySelector(".progress-bar");
 
@@ -85,6 +85,20 @@ opciones.map( (opcion, index) => {
 
     document.querySelector('#containergrandepreguntas').appendChild(div)
 
+    let esUltimo = index === opciones.length - 1;
+
+    if(esUltimo) {
+        let div = document.createElement("button")
+        div.id = "btnVerResultado"
+        div.textContent = "Ver mis resultados"
+        div.disabled = true;
+        document.querySelector('#containergrandepreguntas').appendChild(div)
+
+        div.addEventListener("click", () => {
+            alert(`Tu resultado es ${totalPuntaje}%`)
+        })
+
+    }
 
     let situacion = document.querySelector(`.situacion${index}`)
     
@@ -97,6 +111,7 @@ opciones.map( (opcion, index) => {
     // label1.textContent = opcion.label1
     // label2.textContent = opcion.label2
     // label3.textContent = opcion.label3
+
 
     situacion.querySelector("#confirmar").addEventListener("click", () => {
 
@@ -118,11 +133,12 @@ opciones.map( (opcion, index) => {
 
             if(selected == opcion.correcto) {
                 alert("Bien")
+                totalPuntaje += (100 / cantidadPreguntas);
             } else {
                 alert("Mal")
             }
     
-            if(index !== opciones.length - 1) {
+            if(!esUltimo) {
                 //Habilitar la situacion proxima
                 let situacionProxima = document.querySelector(`.situacion${index+1}`)
     
@@ -132,6 +148,8 @@ opciones.map( (opcion, index) => {
                 situacionProxima.querySelector("#confirmar").disabled = false;
                 return;
             }
+
+            document.querySelector('#btnVerResultado').disabled = false;
     
             //Habilitar un boton de ver resultados?
 
