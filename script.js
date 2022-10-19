@@ -59,7 +59,7 @@ opciones.map( (opcion, index) => {
                 <input class="form-check-input" type="radio" name='flexRadioDefault${index}' id="flexRadioDefault${index}-3" value="3">
                 <label class="form-check-label" for="flexRadioDefault${index}-3" id="label3">${opcion.label3}</label>
             </div>
-            <button id="confirmar">Confirmar</button>
+            <button id="confirmar" class="btn btn-primary">Confirmar</button>
     </ul>
         `;
     } else {
@@ -78,7 +78,7 @@ opciones.map( (opcion, index) => {
                 <input class="form-check-input" type="radio" name='flexRadioDefault${index}' id="flexRadioDefault${index}-3" value="3" disabled>
                 <label class="form-check-label" for="flexRadioDefault${index}-3" id="label3">${opcion.label3}</label>
             </div>
-            <button id="confirmar" disabled>Confirmar</button>
+            <button id="confirmar" class="btn btn-primary" disabled>Confirmar</button>
     </ul>
         `;
     }
@@ -92,6 +92,7 @@ opciones.map( (opcion, index) => {
         div.id = "btnVerResultado"
         div.textContent = "Ver mis resultados"
         div.disabled = true;
+        div.classList.add("btn", "btn-success");
         document.querySelector('#containergrandepreguntas').appendChild(div)
 
         div.addEventListener("click", () => {
