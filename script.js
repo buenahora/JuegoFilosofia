@@ -132,10 +132,9 @@ opciones.map( (opcion, index) => {
             let selected = seleccionado.value;
 
             if(selected == opcion.correcto) {
-                alert("Bien")
                 totalPuntaje += (100 / cantidadPreguntas);
             } else {
-                alert("Mal")
+                
             }
     
             if(!esUltimo) {
