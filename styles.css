@@ -36,3 +36,10 @@ body {
 #containergrandepreguntas .form-check label:hover {
   font-weight: 500;
 }
+
+#progress {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}

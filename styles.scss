@@ -42,3 +42,9 @@ $font: 'Poppins', sans-serif;
         font-weight: 500;
     }
   }
+
+#progress{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
