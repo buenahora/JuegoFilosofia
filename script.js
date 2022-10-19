@@ -35,6 +35,9 @@ let opciones = [
 
 var cantidadPreguntas = opciones.length;
 
+let opcion = opciones[0];
+
+
 
 opciones.map( (opcion, index) => {
 
@@ -81,25 +84,12 @@ opciones.map( (opcion, index) => {
             <button id="confirmar" class="btn btn-primary" disabled>Confirmar</button>
     </ul>
         `;
+    div.style.display = "none";
+
     }
 
     document.querySelector('#containergrandepreguntas').appendChild(div)
 
-    let esUltimo = index === opciones.length - 1;
-
-    if(esUltimo) {
-        let div = document.createElement("button")
-        div.id = "btnVerResultado"
-        div.textContent = "Ver mis resultados"
-        div.disabled = true;
-        div.classList.add("btn", "btn-success");
-        document.querySelector('#containergrandepreguntas').appendChild(div)
-
-        div.addEventListener("click", () => {
-            alert(`Tu resultado es ${totalPuntaje}%`)
-        })
-
-    }
 
     let situacion = document.querySelector(`.situacion${index}`)
     
@@ -120,6 +110,8 @@ opciones.map( (opcion, index) => {
 
         if(seleccionado) {
 
+            let esUltimo = index === opciones.length - 1;
+
             //Aumentar progress bar
             widthProgressBar += (100 / cantidadPreguntas);
             barraProgreso.style.width = `${widthProgressBar}%`;
@@ -128,19 +120,31 @@ opciones.map( (opcion, index) => {
             situacion.querySelectorAll(".form-check-input").forEach(element => {
                 element.disabled = true;
             })
-            situacion.querySelector("#confirmar").disabled = true;
+
+            situacion.remove()
+
+            // situacion.querySelector("#confirmar").disabled = true;
 
             let selected = seleccionado.value;
 
             if(selected == opcion.correcto) {
                 totalPuntaje += (100 / cantidadPreguntas);
             } else {
-                
+
             }
     
             if(!esUltimo) {
                 //Habilitar la situacion proxima
                 let situacionProxima = document.querySelector(`.situacion${index+1}`)
+                situacionProxima.style.display = "flex"
+
+                let esPenultimo = index + 1 === opciones.length - 1;
+
+                if(esPenultimo) {
+                    situacionProxima.querySelector("#confirmar").textContent = "Ver resultado";
+                    situacionProxima.querySelector("#confirmar").disabled = false;
+                }
+                
     
                 situacionProxima.querySelectorAll(".form-check-input").forEach(element => {
                     element.disabled = false;
