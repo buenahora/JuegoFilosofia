@@ -8,9 +8,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="./script.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
     <title>Juego Kant</title>
 </head>
 <body>
+
+
+      
+      <!-- Modal -->
+      <div class="modal fade" id="congratsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document" id="modalDialog">
+          <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body">
+              <h5 class="modal-title" id="exampleModalLabel">Felicitaciones, has completado nuestro cuestionario, tu resultado es <span id="txtResultado"></span></h5>
+            </div>
+            <div class="modal-footer">
+      
+            </div>
+          </div>
+        </div>
+      </div>
+
     <div class="progress" id="progress">
         <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
@@ -66,7 +87,8 @@
         </div> -->
         
     </div>
-    
+
+
     <svg class="dn">
         <defs>
           <symbol id="svg-confetti">
@@ -74,31 +96,5 @@
           </symbol>
         </defs>
       </svg>
-      
-      
-      <button type="button" class="btn btn-primary" onclick="confetti()" data-toggle="modal" data-target="#congratsModal">
-        Launch Congradulations Modal
-      </button>
-      
-      <!-- Modal -->
-      <div class="modal fade" id="congratsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <h5 class="modal-title" id="exampleModalLabel">Congratulations!</h5>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      
-            </div>
-          </div>
-        </div>
-      </div>
-
 </body>
 </html>
