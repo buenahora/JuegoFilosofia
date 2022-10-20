@@ -63,29 +63,65 @@ let opciones = [
         label1: "Ayudar al compañero de clase aunque te aburra porque eres buena persona.",
         label2: "Optas por quedarte jugando videojuegos y no ayudar a tu compañero. Él ya debería saber los conceptos dados en clase. ",
         label3: "Lo ayudas porque sabes que él es bueno en Sociología y te ayudará para la próxima prueba. ",
-        correcto: "1"
+        correcto: "1",
+        regular: "3"
     },
     {
-        pregunta: "Ves a alguien que precisa ayuda, que harias?",
-        label1: "Ayudarlo",
-        label2: "Dejarlo",
-        label3: "Ni idea",
-        correcto: "1"
+        pregunta: "Ahora imagina que tu mejor amigo/a te pide ayuda para estudiar para la prueba de matemáticas. ¿Qué harías?",
+        label1: "Ayudar a tu mejor amigo cómo ayudarías a cualquier otra persona que te pidiera ayuda",
+        label2: "Ayudar a tu mejor amigo a pesar de que te aburre solo porque es tu mejor amigo (De acuerdo con el deber, por inclinación inmediata",
+        label3: "Optas por quedarte jugando videojuegos y no ayudar a tu amigo. Él ya debería saber los conceptos dados en clase.",
+        correcto: "1",
+        regular: "2"
     },
     {
-        pregunta: "Ves a alguien que precisa ayuda, que harias?",
-        label1: "Ayudarlo",
-        label2: "Dejarlo",
-        label3: "Ni idea",
-        correcto: "1"
+        pregunta: "Imagina que eres dueño/a de un gran comercio único en tu área, por lo tanto tú eres quien pone los precios de los artículos que vendes y no tienes competencia. Un día llega un comprador inexperto, que no tiene idea de los precios del mercado. A la hora de pagar, ¿cuánto le cobrarías?        ",
+        label1: "Te aprovechas de la situación y le cobras el doble de lo que en realidad lo vendes normalmente. Tú tienes el monopolio y este comprador no consigue tu producto en ningún otro lado, puedes cobrar lo que quieras.",
+        label2: "Le cobras lo mismo que a cualquier otra persona.",
+        label3: "Crees haber visto a esta persona antes y sabes que te puede ser útil en el futuro, por ello decides cobrarle lo mismo que a cualquier otra persona.",
+        correcto: "2",
+        regular: "3"
     },
     {
-        pregunta: "Ves a alguien que precisa ayuda, que harias?",
-        label1: "Ayudarlo",
-        label2: "Dejarlo",
-        label3: "Ni idea",
-        correcto: "1"
+        pregunta: "En esta situación estás en la playa y a lo lejos ves una persona pidiendo socorro porque se está ahogando. Tu sabes nadar y dispones de todos los medios para rescatarla ¿Qué harías?",
+        label1: "Te haces el distraído y sigues con lo tuyo. Los guardavidas están para estos casos y de todas formas hay mucha gente en la playa, alguien irá a rescatarla.",
+        label2: "Decides rápidamente ir a socorrerla, ya que te das cuenta que la persona que se está ahogando es alguien que te debe dinero.",
+        label3: "Decides rápidamente ir a socorrerla, cualquier persona en esa situación necesita de ayuda.",
+        correcto: "3",
+        regular: "2"
     },
+    {
+        pregunta: "Ahora la persona que se ahoga es un ser querido, un integrante de tu familia. ¿Qué harías?",
+        label1: "Quieres mucho a esta persona y no la dejarás morir. Nadas para salvarla lo más rápido que puedes.",
+        label2: "Decides no hacer nada. Hay muchas personas que están presenciando esta escena, probablemente alguien irá a rescatarlo.",
+        label3: " Nuevamente, decides rápidamente ir a socorrerla, cualquier persona en esa situación necesita de ayuda. ",
+        correcto: "3",
+        regular: "1"
+    },
+    {
+        pregunta: "Imagina que eres doctor/a cardióloga. Siempre te tomas tu media hora de descanso y jamás atiendes a nadie durante ella por más urgente que sea. Un día llega un paciente a la sala de emergencias que requiere acción inmediata para salvarlo, sin embargo tuvo la mala suerte de caer en tu media hora de descanso. ¿Qué harías?        ",
+        label1: "Haces una excepción e interrumpes tú descanso para ir a ayudar. Si es una emergencia necesita ser atendida lo antes posible.",
+        label2: "Decides mantenerte firme con tu decisión y disfrutas el resto de tu hora de descanso. Estoy trabajando y me corresponde mi tiempo de descanso, luego atenderé al paciente. ",
+        label3: "Por alguna razón sabes que esta persona es familiar cercano de tu jefe y decides interrumpir tu hora de descanso para atenderla. Tal vez pueda darte un ascenso o aumentar tu sueldo. ",
+        correcto: "1",
+        regular: "3"
+    },
+    {
+        pregunta: "En este caso, la persona que entra a la sala de emergencias es un amigo/a al cual quieres mucho. ¿Qué haces esta vez?        ",
+        label1: "Haces una excepción e interrumpes tú descanso para ir a ayudar. Es tu amigo y jamás lo dejarías morir pudiendo hacer algo al respecto. ",
+        label2: "A pesar de que sea tu amigo decides atenderlo luego de tu hora de descanso. ",
+        label3: "Actúas de la misma forma que harías con cualquier otra persona, sea tu amigo o no. ",
+        correcto: "3",
+        regular: "1"
+    },
+    {
+        pregunta: "Por último, imagina que estás caminando por la calle y pasas por un callejón donde ves que 2 bullies le están pegando a otra persona. Te das cuenta que la persona siendo golpeada es la misma que te hizo la vida imposible haciéndote bullying durante años en la escuela. ¿Qué harías?        ",
+        label1: "Decides hacer la vista gorda y continuar por tu camino. Esa persona se lo merece, ya que me hizo bullying durante años haciéndome la vida imposible.",
+        label2: "Haces todo en tu poder para detener la situación e incluso llamas a la policía. Nadie merece ser golpeado.",
+        label3: "Haces todo lo que puedes para detener la pelea. Sabes que si lo haces la persona que te hizo bullying durante tu infancia te pedirá perdón y quedará en deuda contigo.",
+        correcto: "2",
+        regular: "3"
+    }
 ]
 
 var cantidadPreguntas = opciones.length;
