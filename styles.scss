@@ -8,6 +8,16 @@ body, html {
   height: 100%;
   }
 
+#congratsModal{
+    align-items: center;
+    .modal-body{
+        text-align: center;
+        #txtResultado{
+            color: blue;
+        }
+    }
+}
+
 .confetti {
   left: 0;
   pointer-events: none ;

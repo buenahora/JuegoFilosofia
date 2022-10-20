@@ -245,7 +245,7 @@ opciones.map( (opcion, index) => {
                     situacionProxima.querySelector("#confirmar").addEventListener("click", () => {
                         let modal = document.querySelector('#congratsModal');
                         modal.classList.remove("fade")
-                        modal.style.display = "block"
+                        modal.style.display = "flex"
                         modal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
 
                         document.querySelector("#txtResultado").textContent = `${totalPuntaje} / ${maximoPuntaje}`

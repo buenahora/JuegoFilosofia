@@ -4,6 +4,16 @@ body, html {
   height: 100%;
 }
 
+#congratsModal {
+  align-items: center;
+}
+#congratsModal .modal-body {
+  text-align: center;
+}
+#congratsModal .modal-body #txtResultado {
+  color: blue;
+}
+
 .confetti {
   left: 0;
   pointer-events: none;
