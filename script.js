@@ -138,7 +138,6 @@ opciones.map( (opcion, index) => {
 
     let div = document.createElement("div")
     div.classList.add('card', 'mt-5', `situacion${index}`)
-    div.style.width = "45rem";
 
 
     if(index == 0) {
