@@ -124,7 +124,11 @@ let opciones = [
     }
 ]
 
+
+
 var cantidadPreguntas = opciones.length;
+var valorPreguntas = 10;
+var maximoPuntaje = cantidadPreguntas * valorPreguntas;
 
 let opcion = opciones[0];
 
@@ -218,10 +222,13 @@ opciones.map( (opcion, index) => {
 
             let selected = seleccionado.value;
 
-            if(selected == opcion.correcto) {
-                totalPuntaje += (100 / cantidadPreguntas);
-            } else {
+            if(selected == opcion.correcto || selected == opcion.regular) {
+                if(seleccionado == opcion.correcto) {
+                  totalPuntaje += 10;
 
+                } else {
+                  totalPuntaje += 5;
+                }
             }
     
             if(!esUltimo) {
@@ -241,7 +248,7 @@ opciones.map( (opcion, index) => {
                         modal.style.display = "block"
                         modal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
 
-                        document.querySelector("#txtResultado").textContent = `${totalPuntaje}%`
+                        document.querySelector("#txtResultado").textContent = `${totalPuntaje} / ${maximoPuntaje}`
                     
                         confetti()
                     
