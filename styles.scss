@@ -55,6 +55,8 @@ body, html {
   body {
     background-color: white;
     font-family: $font;
+    height: 100vh;
+    overflow: hidden;
   }
 
   .card{

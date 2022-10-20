@@ -59,11 +59,11 @@ function randomize(collection) {
 
 let opciones = [
     {
-        pregunta: "Prometiste algo pero ahora se te dificulta cumplirlo, que harias?",
-        label1: "Romper la promesa",
-        label2: "Hacer todo lo que puedas por cumplirla",
-        label3: "??",
-        correcto: "2"
+        pregunta: "Imagina que un compañero de clase te pide ayuda para estudiar para una prueba de Matemática. Tú tienes tiempo libre para hacerlo y eres muy bueno en matemáticas, sin embargo te aburre ayudarlo ¿qué harías?",
+        label1: "Ayudar al compañero de clase aunque te aburra porque eres buena persona.",
+        label2: "Optas por quedarte jugando videojuegos y no ayudar a tu compañero. Él ya debería saber los conceptos dados en clase. ",
+        label3: "Lo ayudas porque sabes que él es bueno en Sociología y te ayudará para la próxima prueba. ",
+        correcto: "1"
     },
     {
         pregunta: "Ves a alguien que precisa ayuda, que harias?",
