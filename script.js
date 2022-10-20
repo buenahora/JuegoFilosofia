@@ -69,7 +69,7 @@ let opciones = [
     {
         pregunta: "Ahora imagina que tu mejor amigo/a te pide ayuda para estudiar para la prueba de matemáticas. ¿Qué harías?",
         label1: "Ayudar a tu mejor amigo cómo ayudarías a cualquier otra persona que te pidiera ayuda",
-        label2: "Ayudar a tu mejor amigo a pesar de que te aburre solo porque es tu mejor amigo (De acuerdo con el deber, por inclinación inmediata",
+        label2: "Ayudar a tu mejor amigo a pesar de que te aburre solo porque es tu mejor amigo",
         label3: "Optas por quedarte jugando videojuegos y no ayudar a tu amigo. Él ya debería saber los conceptos dados en clase.",
         correcto: "1",
         regular: "2"
@@ -158,7 +158,7 @@ opciones.map( (opcion, index) => {
                 <label class="form-check-label" for="flexRadioDefault${index}-3" id="label3">${opcion.label3}</label>
             </div>
             <button id="confirmar" class="btn btn-primary">Confirmar</button>
-    </ul>
+            </ul>
         `;
     } else {
         div.innerHTML = `
@@ -201,6 +201,8 @@ opciones.map( (opcion, index) => {
 
     situacion.querySelector("#confirmar").addEventListener("click", () => {
 
+       document.querySelector("#status").textContent = ""
+
         let seleccionado = Array.from(document.getElementsByName(`flexRadioDefault${index}`)).find(r => r.checked) 
 
         if(seleccionado) {
@@ -216,7 +218,6 @@ opciones.map( (opcion, index) => {
                 element.disabled = true;
             })
 
-            situacion.remove()
 
             // situacion.querySelector("#confirmar").disabled = true;
 
@@ -232,6 +233,8 @@ opciones.map( (opcion, index) => {
             }
     
             if(!esUltimo) {
+            situacion.remove()
+
                 //Habilitar la situacion proxima
                 let situacionProxima = document.querySelector(`.situacion${index+1}`)
                 situacionProxima.style.display = "flex"
@@ -243,21 +246,32 @@ opciones.map( (opcion, index) => {
                     situacionProxima.querySelector("#confirmar").disabled = false;
 
                     situacionProxima.querySelector("#confirmar").addEventListener("click", () => {
+
+                      let seleccionado = Array.from(document.getElementsByName(`flexRadioDefault${index + 1}`)).find(r => r.checked) 
+                      console.log(document.getElementsByName(`flexRadioDefault${index + 1}`));
+
+                      if(seleccionado) {
+
                         let modal = document.querySelector('#congratsModal');
                         modal.classList.remove("fade")
                         modal.style.display = "flex"
                         modal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-
+  
                         document.querySelector("#txtResultado").textContent = `${totalPuntaje} / ${maximoPuntaje}`
                     
                         confetti()
                     
                         modal.addEventListener("click", () => {
                             modal.remove()
+                            location.reload()
                         })
                         // let modalDialog = document.querySelector('#modalDialog');
                         // modalDialog.style.display = "block"
                         // modalDialog.style.opacity = "1";
+                      } else {
+                        document.querySelector("#status").textContent = "Debes seleccionar una opcion"
+                      }
+
                     })
 
 
@@ -279,7 +293,7 @@ opciones.map( (opcion, index) => {
             //Habilitar un boton de ver resultados?
 
         } else {
-            alert("Debes seleccionar una opcion")
+            document.querySelector("#status").textContent = "Debes seleccionar una opcion"
         }
         
 
