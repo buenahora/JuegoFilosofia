@@ -69,7 +69,7 @@ let opciones = [
     {
         pregunta: "Ahora imagina que tu mejor amigo/a te pide ayuda para estudiar para la prueba de matemáticas. ¿Qué harías?",
         label1: "Ayudar a tu mejor amigo cómo ayudarías a cualquier otra persona que te pidiera ayuda",
-        label2: "Ayudar a tu mejor amigo a pesar de que te aburre solo porque es tu mejor amigo (De acuerdo con el deber, por inclinación inmediata",
+        label2: "Ayudar a tu mejor amigo a pesar de que te aburre solo porque es tu mejor amigo",
         label3: "Optas por quedarte jugando videojuegos y no ayudar a tu amigo. Él ya debería saber los conceptos dados en clase.",
         correcto: "1",
         regular: "2"
