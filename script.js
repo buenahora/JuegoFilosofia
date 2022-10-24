@@ -224,11 +224,12 @@ opciones.map( (opcion, index) => {
             let selected = seleccionado.value;
 
             if(selected == opcion.correcto || selected == opcion.regular) {
-                if(seleccionado == opcion.correcto) {
-                  totalPuntaje += 10;
 
+                if(selected == opcion.correcto) {
+                  totalPuntaje += 10;
                 } else {
                   totalPuntaje += 5;
+
                 }
             }
     
